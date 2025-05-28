@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Checkout - Loberiam Shop. Finalize sua compra de forma rápida e segura.">
+    <title>Checkout - Loberiam Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="announcement-bar">
+        <div class="container">
+            <div class="announcement-slider">
+                <div class="announcement-slide active">Frete grátis para compras acima de R$ 199,90 - Aproveite!</div>
+                <div class="announcement-slide">10% OFF na primeira compra com o cupom: BEMVINDO10</div>
+                <div class="announcement-slide">Parcele em até 12x sem juros em todo o site</div>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header checkout-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-loberiam.png" alt="Loberiam Shop" height="50">
+                </a>
+            </div>
+            <div class="checkout-steps">
+                <div class="checkout-step active">
+                    <div class="step-number">1</div>
+                    <span class="step-name">Identificação</span>
+                </div>
+                <div class="checkout-step">
+                    <div class="step-number">2</div>
+                    <span class="step-name">Entrega</span>
+                </div>
+                <div class="checkout-step">
+                    <div class="step-number">3</div>
+                    <span class="step-name">Pagamento</span>
+                </div>
+                <div class="checkout-step">
+                    <div class="step-number">4</div>
+                    <span class="step-name">Confirmação</span>
+                </div>
+            </div>
+            <div class="checkout-security">
+                <i class="fas fa-lock"></i>
+                <span>Compra 100% segura</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="checkout-container">
+                <div class="checkout-main">
+                    <section class="checkout-section active" id="identification">
+                        <h2 class="section-title">Identificação</h2>
+                        
+                        <div class="login-options">
+                            <div class="login-option">
+                                <h3>Já tenho cadastro</h3>
+                                <form class="login-form">
+                                    <div class="form-group">
+                                        <label for="email">E-mail</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Senha</label>
+                                        <div class="password-input">
+                                            <input type="password" id="password" name="password" required>
+                                            <button type="button" class="toggle-password">
+                                                <i class="far fa-eye"></i>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="forgot-password">Esqueci minha senha</a>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Entrar</button>
+                                </form>
+                                <div class="social-login">
+                                    <p>Ou entre com</p>
+                                    <div class="social-buttons">
+                                        <button class="btn btn-social google">
+                                            <i class="fab fa-google"></i> Google
+                                        </button>
+                                        <button class="btn btn-social facebook">
+                                            <i class="fab fa-facebook-f"></i> Facebook
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="login-option">
+                                <h3>Sou novo cliente</h3>
+                                <form class="register-form">
+                                    <div class="form-group">
+                                        <label for="new-email">E-mail</label>
+                                        <input type="email" id="new-email" name="new-email" required>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="first-name">Nome</label>
+                                            <input type="text" id="first-name" name="first-name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="last-name">Sobrenome</label>
+                                            <input type="text" id="last-name" name="last-name" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cpf">CPF</label>
+                                        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Telefone</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="new-password">Senha</label>
+                                            <div class="password-input">
+                                                <input type="password" id="new-password" name="new-password" required>
+                                                <button type="button" class="toggle-password">
+                                                    <i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="confirm-password">Confirmar senha</label>
+                                            <div class="password-input">
+                                                <input type="password" id="confirm-password" name="confirm-password" required>
+                                                <button type="button" class="toggle-password">
+                                                    <i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" id="terms" name="terms" required>
+                                        <label for="terms">Li e concordo com os <a href="politicas.html" target="_blank">Termos e Condições</a> e <a href="politicas.html#privacidade" target="_blank">Política de Privacidade</a></label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" id="newsletter" name="newsletter">
+                                        <label for="newsletter">Quero receber ofertas e novidades por e-mail</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Continuar</button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <div class="guest-checkout">
+                            <button class="btn btn-outline btn-block">Continuar sem cadastro</button>
+                        </div>
+                        
+                        <div class="checkout-navigation">
+                            <a href="carrinho.html" class="btn btn-outline">Voltar ao carrinho</a>
+                            <button class="btn btn-primary next-step" data-next="shipping">Continuar</button>
+                        </div>
+                    </section>
+                    
+                    <section class="checkout-section" id="shipping">
+                        <h2 class="section-title">Entrega</h2>
+                        
+                        <div class="address-section">
+                            <h3>Endereço de entrega</h3>
+                            
+                            <div class="address-search">
+                                <div class="form-group">
+                                    <label for="cep">CEP</label>
+                                    <div class="cep-input">
+                                        <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+                                        <button class="btn btn-secondary">Buscar</button>
+                                    </div>
+                                    <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank" class="cep-link">Não sei meu CEP</a>
+                                </div>
+                            </div>
+                            
+                            <form class="address-form">
+                                <div class="form-row">
+                                    <div class="form-group form-group-large">
+                                        <label for="street">Rua</label>
+                                        <input type="text" id="street" name="street" required>
+                                    </div>
+                                    <div class="form-group form-group-small">
+                                        <label for="number">Número</label>
+                                        <input type="text" id="number" name="number" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="complement">Complemento (opcional)</label>
+                                    <input type="text" id="complement" name="complement">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="neighborhood">Bairro</label>
+                                        <input type="text" id="neighborhood" name="neighborhood" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city">Cidade</label>
+                                        <input type="text" id="city" name="city" required>
+                                    </div>
+                                    <div class="form-group form-group-small">
+                                        <label for="state">Estado</label>
+                                        <select id="state" name="state" required>
+                                            <option value="">Selecione</option>
+                                            <option value="AC">AC</option>
+                                            <option value="AL">AL</option>
+                                            <option value="AP">AP</option>
+                                            <option value="AM">AM</option>
+                                            <option value="BA">BA</option>
+                                            <option value="CE">CE</option>
+                                            <option value="DF">DF</option>
+                                            <option value="ES">ES</option>
+                                            <option value="GO">GO</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MT">MT</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MG">MG</option>
+                                            <option value="PA">PA</option>
+                                            <option value="PB">PB</option>
+                                            <option value="PR">PR</option>
+                                            <option value="PE">PE</option>
+                                            <option value="PI">PI</option>
+                                            <option value="RJ">RJ</option>
+                                            <option value="RN">RN</option>
+                                            <option value="RS">RS</option>
+                                            <option value="RO">RO</option>
+                                            <option value="RR">RR</option>
+                                            <option value="SC">SC</option>
+                                            <option value="SP">SP</option>
+                                            <option value="SE">SE</option>
+                                            <option value="TO">TO</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" id="save-address" name="save-address" checked>
+                                    <label for="save-address">Salvar endereço para próximas compras</label>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="shipping-options">
+                            <h3>Opções de entrega</h3>
+                            
+                            <div class="shipping-option-list">
+                                <label class="shipping-option">
+                                    <input type="radio" name="shipping" value="standard" checked>
+                                    <div class="shipping-option-content">
+                                        <div class="shipping-option-info">
+                                            <div class="shipping-type">Padrão</div>
+                                            <div class="shipping-estimate">Entrega em até 5 dias úteis</div>
+                                        </div>
+                                        <div class="shipping-price">R$ 19,90</div>
+                                    </div>
+                                </label>
+                                
+                                <label class="shipping-option">
+                                    <input type="radio" name="shipping" value="express">
+                                    <div class="shipping-option-content">
+                                        <div class="shipping-option-info">
+                                            <div class="shipping-type">Expresso</div>
+                                            <div class="shipping-estimate">Entrega em até 2 dias úteis</div>
+                                        </div>
+                                        <div class="shipping-price">R$ 29,90</div>
+                                    </div>
+                                </label>
+                                
+                                <label class="shipping-option">
+                                    <input type="radio" name="shipping" value="pickup">
+                                    <div class="shipping-option-content">
+                                        <div class="shipping-option-info">
+                                            <div class="shipping-type">Retirada na loja</div>
+                                            <div class="shipping-estimate">Disponível em 1 dia útil</div>
+                                        </div>
+                                        <div class="shipping-price free">Grátis</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="checkout-navigation">
+                            <button class="btn btn-outline prev-step" data-prev="identification">Voltar</button>
+                            <button class="btn btn-primary next-step" data-next="payment">Continuar</button>
+                        </div>
+                    </section>
+                    
+                    <section class="checkout-section" id="payment">
+                        <h2 class="section-title">Pagamento</h2>
+                        
+                        <div class="payment-methods">
+                            <div class="payment-tabs">
+                                <button class="payment-tab active" data-payment="credit-card">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Cartão de Crédito</span>
+                                </button>
+                                <button class="payment-tab" data-payment="pix">
+                                    <i class="fab fa-pix"></i>
+                                    <span>PIX</span>
+                                </button>
+                                <button class="payment-tab" data-payment="boleto">
+                                    <i class="fas fa-barcode"></i>
+                                    <span>Boleto</span>
+                                </button>
+                            </div>
+                            
+                            <div class="payment-content active" id="credit-card">
+                                <form class="credit-card-form">
+                                    <div class="form-group">
+                                        <label for="card-number">Número do cartão</label>
+                                        <div class="card-input">
+                                            <input type="text" id="card-number" name="card-number" placeholder="0000 0000 0000 0000" required>
+                                            <div class="card-brands">
+                                                <i class="fab fa-cc-visa"></i>
+                                                <i class="fab fa-cc-mastercard"></i>
+                                                <i class="fab fa-cc-amex"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="card-name">Nome no cartão</label>
+                                        <input type="text" id="card-name" name="card-name" placeholder="Como aparece no cartão" required>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="expiry">Validade</label>
+                                            <input type="text" id="expiry" name="expiry" placeholder="MM/AA" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cvv">CVV</label>
+                                            <div class="cvv-input">
+                                                <input type="text" id="cvv" name="cvv" placeholder="000" required>
+                                                <i class="fas fa-question-circle cvv-help" title="Código de segurança de 3 ou 4 dígitos no verso do cartão"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="installments">Parcelas</label>
+                                        <select id="installments" name="installments" required>
+                                            <option value="1">1x de R$ 2.419,80 sem juros</option>
+                                            <option value="2">2x de R$ 1.209,90 sem juros</option>
+                                            <option value="3">3x de R$ 806,60 sem juros</option>
+                                            <option value="4">4x de R$ 604,95 sem juros</option>
+                                            <option value="5">5x de R$ 483,96 sem juros</option>
+                                            <option value="6">6x de R$ 403,30 sem juros</option>
+                                            <option value="7">7x de R$ 345,69 sem juros</option>
+                                            <option value="8">8x de R$ 302,48 sem juros</option>
+                                            <option value="9">9x de R$ 268,87 sem juros</option>
+                                            <option value="10">10x de R$ 241,98 sem juros</option>
+                                            <option value="11">11x de R$ 219,98 sem juros</option>
+                                            <option value="12">12x de R$ 201,65 sem juros</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" id="save-card" name="save-card">
+                                        <label for="save-card">Salvar cartão para próximas compras</label>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                            <div class="payment-content" id="pix">
+                                <div class="pix-info">
+                                    <div class="pix-discount">
+                                        <i class="fas fa-tag"></i>
+                                        <span>5% de desconto no pagamento via PIX</span>
+                                    </div>
+                                    <p>Ao finalizar a compra, você receberá um QR Code para pagamento. O pagamento é processado instantaneamente.</p>
+                                    <div class="pix-total">
+                                        <span>Total com desconto:</span>
+                                        <strong>R$ 2.298,81</strong>
+                                    </div>
+                                    <div class="pix-image">
+                                        <img src="assets/images/pix-example.jpg" alt="Exemplo de QR Code PIX">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-content" id="boleto">
+                                <div class="boleto-info">
+                                    <div class="boleto-discount">
+                                        <i class="fas fa-tag"></i>
+                                        <span>3% de desconto no pagamento via Boleto</span>
+                                    </div>
+                                    <p>Ao finalizar a compra, você receberá um boleto bancário para pagamento. A confirmação ocorre em até 3 dias úteis.</p>
+                                    <div class="boleto-total">
+                                        <span>Total com desconto:</span>
+                                        <strong>R$ 2.347,21</strong>
+                                    </div>
+                                    <div class="boleto-warning">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <span>O prazo de entrega começa a contar após a confirmação do pagamento.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="checkout-navigation">
+                            <button class="btn btn-outline prev-step" data-prev="shipping">Voltar</button>
+                            <button class="btn btn-primary next-step" data-next="confirmation">Continuar</button>
+                        </div>
+                    </section>
+                    
+                    <section class="checkout-section" id="confirmation">
+                        <h2 class="section-title">Confirmação do Pedido</h2>
+                        
+                        <div class="order-confirmation">
+                            <div class="confirmation-section">
+                                <h3>Endereço de entrega</h3>
+                                <div class="confirmation-content">
+                                    <p><strong>João Silva</strong></p>
+                                    <p>Rua das Flores, 123 - Apto 45</p>
+                                    <p>Jardim Primavera</p>
+                                    <p>São Paulo - SP, 01234-567</p>
+                                    <p>Tel: (11) 98765-4321</p>
+                                    <button class="btn btn-link">Editar</button>
+                                </div>
+                            </div>
+                            
+                            <div class="confirmation-section">
+                                <h3>Forma de entrega</h3>
+                                <div class="confirmation-content">
+                                    <p><strong>Padrão</strong></p>
+                                    <p>Entrega em até 5 dias úteis</p>
+                                    <p>R$ 19,90</p>
+                                    <button class="btn btn-link">Editar</button>
+                                </div>
+                            </div>
+                            
+                            <div class="confirmation-section">
+                                <h3>Forma de pagamento</h3>
+                                <div class="confirmation-content">
+                                    <p><strong>Cartão de Crédito</strong></p>
+                                    <p>Visa terminado em 1234</p>
+                                    <p>12x de R$ 201,65 sem juros</p>
+                                    <button class="btn btn-link">Editar</button>
+                                </div>
+                            </div>
+                            
+                            <div class="confirmation-products">
+                                <h3>Produtos</h3>
+                                <div class="confirmation-product-list">
+                                    <div class="confirmation-product">
+                                        <img src="assets/images/product1.jpg" alt="Smartphone Avançado com Câmera Profissional" class="product-thumbnail">
+                                        <div class="product-info">
+                                            <h4>Smartphone Avançado com Câmera Profissional</h4>
+                                            <p>Cor: Preto | Armazenamento: 128GB</p>
+                                            <p>Quantidade: 1</p>
+                                        </div>
+                                        <div class="product-price">R$ 1.999,90</div>
+                                    </div>
+                                    <div class="confirmation-product">
+                                        <img src="assets/images/product3.jpg" alt="Fone de Ouvido Bluetooth com Cancelamento de Ruído" class="product-thumbnail">
+                                        <div class="product-info">
+                                            <h4>Fone de Ouvido Bluetooth com Cancelamento de Ruído</h4>
+                                            <p>Cor: Branco</p>
+                                            <p>Quantidade: 1</p>
+                                        </div>
+                                        <div class="product-price">R$ 419,90</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="checkout-navigation">
+                            <button class="btn btn-outline prev-step" data-prev="payment">Voltar</button>
+                            <button class="btn btn-primary place-order">Finalizar Compra</button>
+                        </div>
+                    </section>
+                </div>
+                
+                <div class="checkout-sidebar">
+                    <div class="order-summary">
+                        <h2>Resumo do Pedido</h2>
+                        <div class="summary-products">
+                            <div class="summary-product">
+                                <img src="assets/images/product1.jpg" alt="Smartphone Avançado com Câmera Profissional" class="product-thumbnail">
+                                <div class="product-info">
+                                    <h4>Smartphone Avançado com Câmera Profissional</h4>
+                                    <p>Quantidade: 1</p>
+                                </div>
+                                <div class="product-price">R$ 1.999,90</div>
+                            </div>
+                            <div class="summary-product">
+                                <img src="assets/images/product3.jpg" alt="Fone de Ouvido Bluetooth com Cancelamento de Ruído" class="product-thumbnail">
+                                <div class="product-info">
+                                    <h4>Fone de Ouvido Bluetooth com Cancelamento de Ruído</h4>
+                                    <p>Quantidade: 1</p>
+                                </div>
+                                <div class="product-price">R$ 419,90</div>
+                            </div>
+                        </div>
+                        
+                        <div class="coupon-container">
+                            <input type="text" placeholder="Cupom de desconto" class="coupon-input">
+                            <button class="btn btn-secondary">Aplicar</button>
+                        </div>
+                        
+                        <div class="summary-totals">
+                            <div class="summary-row">
+                                <span>Subtotal (2 itens)</span>
+                                <span>R$ 2.419,80</span>
+                            </div>
+                            <div class="summary-row discount">
+                                <span>Desconto</span>
+                                <span>- R$ 0,00</span>
+                            </div>
+                            <div class="summary-row shipping">
+                                <span>Frete</span>
+                                <span>R$ 19,90</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span>R$ 2.439,70</span>
+                            </div>
+                            <div class="installment-info">
+                                Em até 12x de <strong>R$ 203,31</strong> sem juros
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checkout-benefits">
+                        <div class="benefit">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="benefit-text">
+                                <h4>Compra Segura</h4>
+                                <p>Seus dados protegidos</p>
+                            </div>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-exchange-alt"></i>
+                            <div class="benefit-text">
+                                <h4>Troca Garantida</h4>
+                                <p>7 dias para devolução</p>
+                            </div>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-headset"></i>
+                            <div class="benefit-text">
+                                <h4>Suporte</h4>
+                                <p>Atendimento especializado</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-security">
+                        <h3>Site Seguro</h3>
+                        <div class="security-seals">
+                            <img src="assets/icons/security.png" alt="Site Seguro SSL">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer checkout-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Loberiam Shop - Todos os direitos reservados</p>
+                </div>
+                <div class="security-seals">
+                    <img src="assets/icons/security.png" alt="Site Seguro SSL">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Anúncios
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.announcement-slide');
+            
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[index].classList.add('active');
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            // Troca de slides a cada 5 segundos
+            setInterval(nextSlide, 5000);
+            
+            // Navegação entre etapas do checkout
+            const nextButtons = document.querySelectorAll('.next-step');
+            const prevButtons = document.querySelectorAll('.prev-step');
+            const checkoutSteps = document.querySelectorAll('.checkout-step');
+            const checkoutSections = document.querySelectorAll('.checkout-section');
+            
+            nextButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const nextId = this.getAttribute('data-next');
+                    const currentSection = document.querySelector('.checkout-section.active');
+                    const nextSection = document.getElementById(nextId);
+                    const currentIndex = Array.from(checkoutSections).indexOf(currentSection);
+                    const nextIndex = Array.from(checkoutSections).indexOf(nextSection);
+                    
+                    // Atualizar seções
+                    currentSection.classList.remove('active');
+                    nextSection.classList.add('active');
+                    
+                    // Atualizar indicadores de etapa
+                    checkoutSteps.forEach((step, index) => {
+                        if (index <= nextIndex) {
+                            step.classList.add('active');
+                        } else {
+                            step.classList.remove('active');
+                        }
+                    });
+                    
+                    // Rolar para o topo
+                    window.scrollTo(0, 0);
+                });
+            });
+            
+            prevButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const prevId = this.getAttribute('data-prev');
+                    const currentSection = document.querySelector('.checkout-section.active');
+                    const prevSection = document.getElementById(prevId);
+                    const currentIndex = Array.from(checkoutSections).indexOf(currentSection);
+                    const prevIndex = Array.from(checkoutSections).indexOf(prevSection);
+                    
+                    // Atualizar seções
+                    currentSection.classList.remove('active');
+                    prevSection.classList.add('active');
+                    
+                    // Atualizar indicadores de etapa
+                    checkoutSteps.forEach((step, index) => {
+                        if (index > prevIndex) {
+                            step.classList.remove('active');
+                        }
+                    });
+                    
+                    // Rolar para o topo
+                    window.scrollTo(0, 0);
+                });
+            });
+            
+            // Abas de métodos de pagamento
+            const paymentTabs = document.querySelectorAll('.payment-tab');
+            const paymentContents = document.querySelectorAll('.payment-content');
+            
+            paymentTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const paymentId = this.getAttribute('data-payment');
+                    
+                    // Atualizar abas
+                    paymentTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Atualizar conteúdos
+                    paymentContents.forEach(c => c.classList.remove('active'));
+                    document.getElementById(paymentId).classList.add('active');
+                });
+            });
+            
+            // Mostrar/ocultar senha
+            const togglePasswordButtons = document.querySelectorAll('.toggle-password');
+            
+            togglePasswordButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const input = this.previousElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    if (input.type === 'password') {
+                        input.type = 'text';
+                        icon.classList.remove('fa-eye');
+                        icon.classList.add('fa-eye-slash');
+                    } else {
+                        input.type = 'password';
+                        icon.classList.remove('fa-eye-slash');
+                        icon.classList.add('fa-eye');
+                    }
+                });
+            });
+            
+            // Finalizar compra
+            const placeOrderButton = document.querySelector('.place-order');
+            
+            placeOrderButton.addEventListener('click', function() {
+                // Simulação de processamento
+                this.disabled = true;
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processando...';
+                
+                setTimeout(() => {
+                    window.location.href = 'confirmacao-pedido.html';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
